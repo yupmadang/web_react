@@ -1,0 +1,90 @@
+.kakao{/*카카오*/
+    background-image: url(https://m.bunjang.co.kr/pc-static/resource/7bf83f72cf54461af573.png);
+  }
+  
+.naver{/*네이버*/
+    background-image: url(https://m.bunjang.co.kr/pc-static/resource/46a186687d81b27fc2c9.png);
+  }
+  
+.facebook{/*페이스북*/
+    background-image: url(https://m.bunjang.co.kr/pc-static/resource/fc95a45c5428930755c1.png);
+  }
+
+.sertification{/*본인인증 선택지*/
+    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC%204th/WEB/web_react/public/img/%EB%B3%B8%EC%9D%B8%EC%9D%B8%EC%A6%9D.svg);
+    background-size: 1rem 1rem;
+    background-position: center center;
+  }
+
+.BJ_logo{/*번개장터 로고*/
+    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC%204th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.svg);
+    width: 136px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+.BJ_logo2{/*번개장터 로그인 로고*/
+    background-image: url(https://m.bunjang.co.kr/pc-static/resource/56db3dd43075482b1d31.png);
+    width : 30px;
+    height : 34px;
+    display: block;
+    margin: auto auto 10px;
+  }
+  
+.appdownload_logo{/*앱다운로드 로고*/
+    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC%204th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4%EB%A1%9C.svg);
+    width: 16px;
+    height: 17px;
+    margin-right: 5px;
+  }
+  
+.bookmark_logo{/*즐겨찾기 로고*/
+    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC%204th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4.svg);
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+  }
+
+.search_img{ /*검색 이미지*/
+  background-image: url(https://m.bunjang.co.kr/pc-static/resource/2be3c66fa47ccd5ece2a.png);
+  width: 16px;
+  height: 16px;
+}
+
+/*이미지 속성*/
+
+.search_right_property{
+  width: 23px;
+  height: 24px;
+}
+
+.menu_button{
+  width: 20px;
+  height: 16px;
+}
+
+.sell_center{
+  width: 72px;
+  height: 26px;
+}
+
+.adv_img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+.goods_img{
+  width: 194px;
+  height: 194px;
+}
+
+.footer_bottom_img{
+  width: 31px; 
+  height: 28px;
+  margin-right: 16px;
+}

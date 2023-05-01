@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import Login from './login';
 import reportWebVitals from './reportWebVitals';
+import { Link } from 'react-router-dom';/*난 버튼 눌러서 페이지 이동할거니까 Link 쓸거닿ㅎㅎㅎㅎㅎ*/
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+const head = ReactDOM.createRoot(document.getElementById('head'));
+head.render(
   <React.StrictMode>
-    <App />
+    <Login />
   </React.StrictMode>
 );
 
