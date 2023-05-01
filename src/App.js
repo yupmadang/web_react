@@ -6,7 +6,8 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Login from "./login";
+import { useNavigate } from 'react-router-dom';
+
 
 /*<a> 관련 처리*/
 function NavigationA(props) {
@@ -60,6 +61,13 @@ function NavigationA(props) {
 
 /*버튼관련 처리*/
 function NavigationButton(props){
+
+  const navigate = useNavigate();
+
+  function handleGoBack() {
+      navigate('/Login');
+  }
+
   if(parseInt(props.mode) === 1){
     return <button className="header_bar_content">
       <div className="bookmark_logo"></div>
@@ -67,9 +75,12 @@ function NavigationButton(props){
     </button>
   }
   else if(parseInt(props.mode) === 2){
-    return <button className="header_bar_content">
-      {props.title}
-    </button>
+    
+    return(
+      <button className="header_bar_content" onClick={handleGoBack}>
+          {props.title}
+      </button>
+    );
   }
   else if(parseInt(props.mode) === 3){
     return <button className="rightside_button">
@@ -214,10 +225,6 @@ function Footer(props){
     console.log("일치하는 결과가 없습니다.")
   }
 }
-
-/*이벤트 처리*/
-
-/** */
 
 /*실제 main함수로 실행해주는 부분*/
 function App() {

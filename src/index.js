@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Login from './login';
 import reportWebVitals from './reportWebVitals';
-import { Link } from 'react-router-dom';/*난 버튼 눌러서 페이지 이동할거니까 Link 쓸거닿ㅎㅎㅎㅎㅎ*/
+import {BrowserRouter,Routes, Route} from "react-router-dom";
+import Login from "./login.js";
+
 
 
 const head = ReactDOM.createRoot(document.getElementById('head'));
 head.render(
   <React.StrictMode>
-    <Login />
+    <BrowserRouter>
+      <Routes>
+        <Route  path="/" element={<App/>}/>
+        <Route  path="/login" element={<Login/>}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

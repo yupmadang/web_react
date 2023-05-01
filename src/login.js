@@ -1,39 +1,44 @@
 import './login.css';
 import './App.css';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 /*이벤트 처리*/
 
 function ButtonAction(props){
-const [isHovered, setIsHovered] = useState(false);
+    const navigate = useNavigate();
+    const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+    function handleGoBack() {
+        navigate('/');
+    }
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
 
-  if(props.mode === '0'){
-    return(
-        <button className="close_button">
-            <img src="https://m.bunjang.co.kr/pc-static/resource/ee442d3dd827628bc5fe.png"  alt = {props.alt}
-            className='login_close'></img>
-        </button>
-    );
-  }
-  else if(props.mode === '1'){
-    return(
-        <a href={()=>false} className="login_body_link"
-        style={{ backgroundColor: isHovered ? '#D3D3D3' : null }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
->
+    if(props.mode === '0'){
+        return(
+            <button className="close_button" onClick={handleGoBack}>
+                <img src="https://m.bunjang.co.kr/pc-static/resource/ee442d3dd827628bc5fe.png"  alt = {props.alt}
+                className='login_close'></img>
+            </button>
+        );
+    }
+    else if(props.mode === '1'){
+        return(
+            <a href={()=>false} className="login_body_link"
+            style={{ backgroundColor: isHovered ? '#D3D3D3' : null }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            >
             <div className="sertification login_type"></div>
-            {props.title}
-        </a>
-    );
-  }
+                {props.title}
+            </a>
+        );
+    }
   else if(props.mode === '2'){
     return(
         <button className="login_body_content"
