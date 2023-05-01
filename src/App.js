@@ -11,27 +11,34 @@ import { useNavigate } from 'react-router-dom';
 
 /*<a> 관련 처리*/
 function NavigationA(props) {
+
+  const navigate = useNavigate();
+
+  function handleGoBack() {
+      navigate('/');
+  }
+
   if(parseInt(props.mode) === 1){
-    return <a className="header_bar_content" href={()=>false}>
+    return <a className="header_bar_content" onClick={handleGoBack}>
     <div className="appdownload_logo"></div>
       {props.title}
     </a>  
   }
   else if(parseInt(props.mode) === 2){
-    return <a className="header_bar_content" href={()=>false}>
+    return <a className="header_bar_content" onClick={handleGoBack}>
       {props.title}
     </a>  
   }
   else if(parseInt(props.mode) === 3){
     return <div>
-      <a className="BJ_logo" href={()=>false}></a>
+      <a className="BJ_logo" onClick={handleGoBack}></a>
     </div>
   }
   else if(parseInt(props.mode) === 4){
-    return <a className="search_img" href={()=>false}></a>
+    return <a className="search_img" onClick={handleGoBack}></a>
   }
   else if(parseInt(props.mode) === 5){
-    return <a className="rightside_button" href={()=>false}>
+    return <a className="rightside_button" onClick={handleGoBack}>
     <img src="https://m.bunjang.co.kr/pc-static/resource/31370b164bc5b7cc4fef.png" 
     alt="내상점 이미지" className="search_right_property">
       </img>{props.title}</a>
@@ -44,7 +51,7 @@ function NavigationA(props) {
   }
   else if(parseInt(props.mode) === 7){
     return <div className="leftside_button_style1">
-    <a href={()=>false} target="_blank" className="leftside_button_style2">
+    <a onClick={handleGoBack} target="_blank" className="leftside_button_style2">
         <b>{props.title}</b>
     </a>
     <img src="https://m.bunjang.co.kr/pc-static/resource/34a01cb11e0b14957f81.png" 
@@ -52,7 +59,7 @@ function NavigationA(props) {
 </div>
   }
   else if(parseInt(props.mode) === 8){
-    return <a href="" target="_blank" className="footer_margin">{props.title}</a>
+    return <a onClick={handleGoBack} target="_blank" className="footer_margin">{props.title}</a>
   }
   else{
     console.log("일치하는 결과가 없습니다.")
@@ -72,7 +79,7 @@ function NavigationButton(props){
     return <button className="header_bar_content">
       <div className="bookmark_logo"></div>
       {props.title}
-    </button>
+      </button>
   }
   else if(parseInt(props.mode) === 2){
     
@@ -242,6 +249,7 @@ function App() {
             </div>
         </div>
       </div>
+      
       <div id="top_info">
         <div id="second_header_background">
             <div className="second_header_bar">
