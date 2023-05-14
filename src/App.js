@@ -7,8 +7,15 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from 'react-router-dom';
-import { func } from 'prop-types';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import redux, {removeText, setText} from './redux'
 
+/*function changeLocation(region) {
+  // setLocation은 2)번에서 생성한 action 객체
+  dispatch(set(region));
+}
+*/
 
 /*<a> 관련 처리*/
 function NavigationA(props) {
@@ -36,10 +43,6 @@ function NavigationA(props) {
     return <div>
       <a className="BJ_logo" onClick={handleGoBack}></a>
     </div>
-  }
-
-  else if(parseInt(props.mode) === 4){
-    return <a className="search_img" onClick={handleGoBack}></a>
   }
 
   else if(parseInt(props.mode) === 5){
@@ -109,7 +112,6 @@ function Login(props){
     function handleGoBack() {
         navigate('/Login');
     }
-
     return(
       <button className="header_bar_content" onClick={handleGoBack}>
           {props.title}
@@ -119,11 +121,30 @@ function Login(props){
 
 /*input관련 처리*/
 function Input(props){
+  const dispatch = useDispatch();
+  const [search, setSearch] = useState('');
+  const onChange = (e) => {
+        setSearch(e.target.value)
+        dispatch(setText(search))
+    }
+  const handleReset = () => {
+    setSearch('검색버튼을 눌렀습니다.');
+    dispatch(removeText(search))
+  };
+
   if(parseInt(props.mode) === 1){
-    return <input type="text" placeholder={"상품명, 지역명, @상점명 검색"} className="search_input_box" defaultValue>
+    return <input type="text" placeholder={"상품명, 지역명, @상점명 검색"} 
+      className="search_input_box" value={search} onChange={onChange}>
   </input>
   }
-  
+
+  else if(parseInt(props.mode) === 2){
+    return (
+      <a className="search_img" onClick={handleReset} ></a>
+    );
+
+  }
+
   else{
     console.log("일치하는 결과가 없습니다.")
   }
@@ -268,7 +289,7 @@ function App() {
                 <div className="search-box">
                     <div className="search">
                         <Input mode = "1"></Input>
-                        <NavigationA mode = "4"></NavigationA>
+                        <Input mode = "2"></Input>
                     </div>
                 </div>
                 <div className="rightside_search">

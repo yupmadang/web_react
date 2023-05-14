@@ -4,9 +4,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
 import Login from "./login.js";
+import Store_redux from "./store_redux";
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { composeWithDevTools } from "redux-devtools-extension";
 
+const store = createStore(Store_redux, composeWithDevTools());
 const head = ReactDOM.createRoot(document.getElementById('head'));
+
 head.render(
+  <Provider store={store}>
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
@@ -15,6 +22,8 @@ head.render(
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
+  </Provider>
+    
 );
 
 
