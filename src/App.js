@@ -7,6 +7,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from 'react-router-dom';
+import { func } from 'prop-types';
 
 
 /*<a> 관련 처리*/
@@ -24,31 +25,37 @@ function NavigationA(props) {
       {props.title}
     </a>  
   }
+
   else if(parseInt(props.mode) === 2){
     return <a className="header_bar_content" onClick={handleGoBack}>
       {props.title}
     </a>  
   }
+
   else if(parseInt(props.mode) === 3){
     return <div>
       <a className="BJ_logo" onClick={handleGoBack}></a>
     </div>
   }
+
   else if(parseInt(props.mode) === 4){
     return <a className="search_img" onClick={handleGoBack}></a>
   }
+
   else if(parseInt(props.mode) === 5){
     return <a className="rightside_button" onClick={handleGoBack}>
     <img src="https://m.bunjang.co.kr/pc-static/resource/31370b164bc5b7cc4fef.png" 
     alt="내상점 이미지" className="search_right_property">
       </img>{props.title}</a>
   }
+
   else if(parseInt(props.mode) === 6){
     return <a className="rightside_button">
     <img src="https://m.bunjang.co.kr/pc-static/resource/bcc7abb5d531bcf26033.png" 
     alt="판매하기 이미지" className="search_right_property">
       </img>{props.title}</a>
   }
+
   else if(parseInt(props.mode) === 7){
     return <div className="leftside_button_style1">
     <a onClick={handleGoBack} target="_blank" className="leftside_button_style2">
@@ -58,9 +65,11 @@ function NavigationA(props) {
     alt="판매자센터 이미지" className="sell_center"></img>
 </div>
   }
+
   else if(parseInt(props.mode) === 8){
     return <a onClick={handleGoBack} target="_blank" className="footer_margin">{props.title}</a>
   }
+
   else{
     console.log("일치하는 결과가 없습니다.")
   }
@@ -69,41 +78,43 @@ function NavigationA(props) {
 /*버튼관련 처리*/
 function NavigationButton(props){
 
-  const navigate = useNavigate();
-
-  function handleGoBack() {
-      navigate('/Login');
-  }
-
   if(parseInt(props.mode) === 1){
     return <button className="header_bar_content">
       <div className="bookmark_logo"></div>
       {props.title}
       </button>
   }
-  else if(parseInt(props.mode) === 2){
-    
-    return(
-      <button className="header_bar_content" onClick={handleGoBack}>
-          {props.title}
-      </button>
-    );
-  }
+
   else if(parseInt(props.mode) === 3){
     return <button className="rightside_button">
     <img src="https://m.bunjang.co.kr/pc-static/resource/32554a59cf002b3def10.png" 
     alt="번개톡 이미지" className="search_right_property">
       </img>{props.title}</button>
   }
+
   else if(parseInt(props.mode) === 4){
     return <div className="leftside_button">
     <img src="https://m.bunjang.co.kr/pc-static/resource/9ddac97c001dd6e0c2eb.png" 
     alt="메뉴 버튼 아이콘" className="menu_button"></img>
     </div>
   }
+  
   else{
     console.log("일치하는 결과가 없습니다.")
   }
+}
+
+function Login(props){
+    const navigate = useNavigate();
+    function handleGoBack() {
+        navigate('/Login');
+    }
+
+    return(
+      <button className="header_bar_content" onClick={handleGoBack}>
+          {props.title}
+      </button>
+    );
 }
 
 /*input관련 처리*/
@@ -244,7 +255,7 @@ function App() {
                 <NavigationButton title = "즐겨찾기" mode = "1"></NavigationButton>
             </div>
             <div className="bookmark_login">
-                <NavigationButton title = "로그인/회원가입" mode = "2"></NavigationButton>
+                <Login title = "로그인/회원가입" ></Login>
                 <NavigationA title = "내 상점" mode = "2"></NavigationA>
             </div>
         </div>

@@ -11,13 +11,13 @@
   }
 
 .sertification{/*본인인증 선택지*/
-    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC%204th/WEB/web_react/public/img/%EB%B3%B8%EC%9D%B8%EC%9D%B8%EC%A6%9D.svg);
+    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC_4th/WEB/web_react/public/img/%EB%B3%B8%EC%9D%B8%EC%9D%B8%EC%A6%9D.svg);
     background-size: 1rem 1rem;
     background-position: center center;
   }
 
 .BJ_logo{/*번개장터 로고*/
-    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC%204th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.svg);
+    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC_4th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.svg);
     width: 136px;
     height: 40px;
     display: flex;
@@ -26,22 +26,22 @@
   }
 
 .BJ_logo2{/*번개장터 로그인 로고*/
-    background-image: url(https://m.bunjang.co.kr/pc-static/resource/56db3dd43075482b1d31.png);
+    background-image: url(C:\Users\yjin1\OneDrive\Main\포트폴리오\UMC_4th\WEB\web_react\public\img\56db3dd43075482b1d31.png);
     width : 30px;
     height : 34px;
     display: block;
     margin: auto auto 10px;
   }
   
-.appdownload_logo{/*앱다운로드 로고*/
-    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC%204th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4%EB%A1%9C.svg);
+.appdownload_logo{/*앱 다운로드 로고*/
+    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC_4th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4%EB%A1%9C.svg);
     width: 16px;
     height: 17px;
     margin-right: 5px;
   }
   
 .bookmark_logo{/*즐겨찾기 로고*/
-    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC%204th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4.svg);
+    background-image: url(file:///C:/Users/yjin1/OneDrive/Main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/UMC_4th/WEB/web_react/public/img/%EB%8B%A4%EC%9A%B4.svg);
     width: 15px;
     height: 16px;
     margin-right: 5px;

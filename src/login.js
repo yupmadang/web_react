@@ -1,13 +1,19 @@
 import './login.css';
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';//라이프사이클을 위한 라이브러리 호출
 
 /*이벤트 처리*/
+
 function ButtonAction(props){
     const navigate = useNavigate();
     const [isHovered, setIsHovered] = useState(false);
-
+    const manage = useEffect(()=>{
+        console.log("로그인 창 관련 useEffect 동작");
+    });
+    
+    
     function handleGoBack() {
         navigate('/');
     }
@@ -27,6 +33,7 @@ function ButtonAction(props){
         );
     }
     else if(props.mode === '1'){
+
         return(
             <a href={()=>false} className="login_body_link"
             style={{ backgroundColor: isHovered ? '#D3D3D3' : null }}
@@ -39,6 +46,7 @@ function ButtonAction(props){
         );
     }
   else if(props.mode === '2'){
+
     return(
         <button className="login_body_content"
         style={{ backgroundColor: isHovered ? '#fae100' : null }}
@@ -50,6 +58,7 @@ function ButtonAction(props){
     );
   }
   else if(props.mode === '3'){
+
     return(
         <button className="login_body_content"
         style={{ backgroundColor: isHovered ? '#3B5998' : null }}
@@ -61,6 +70,7 @@ function ButtonAction(props){
     );
   }
   else if(props.mode === '4'){
+
     return(
         <button className="login_body_content"
         style={{ backgroundColor: isHovered ? '#03CF5D' : null }}
@@ -71,9 +81,7 @@ function ButtonAction(props){
         </button>
     );
   }
-  else{
-    return console.log("일치 값이 없다고!!!")
-  }
+  return({manage})
 }
 
 /*보이는 것들 처리 사실 설명 귀찮아*/
@@ -105,7 +113,6 @@ function Href(props){
    else{
     console.log("해당하는 것이 없어");
    }
-
 }
 
 function login(){

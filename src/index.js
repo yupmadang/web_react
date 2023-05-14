@@ -5,19 +5,19 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
 import Login from "./login.js";
 
-
-
 const head = ReactDOM.createRoot(document.getElementById('head'));
 head.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route  path="/" element={<App/>}/>
-        <Route  path="/login" element={<Login/>}/>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route  path="/" element={<App/>}/>
+          <Route  path="/login" element={<Login/>}/>
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
