@@ -2,7 +2,8 @@ import './login.css';
 import './App.css';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';//라이프사이클을 위한 라이브러리 호출
+import { useEffect, useState } from 'react'; //라이프사이클을 위한 라이브러리 호출
+import { useMediaQuery } from 'react-responsive';
 
 /*이벤트 처리*/
 
@@ -16,7 +17,7 @@ function ButtonAction(props){
     
     function handleGoBack() {
         navigate('/');
-    }
+    };
     const handleMouseEnter = () => {
         setIsHovered(true);
     };
