@@ -120,6 +120,7 @@
 .search_input_box{
   flex-grow: 1;
   border: none;
+  outline : none;
 }
 /*검색창 우측 div관련*/
 
